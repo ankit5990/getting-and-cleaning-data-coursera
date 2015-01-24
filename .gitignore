@@ -9,3 +9,11 @@
 
 # RStudio files
 .Rproj.user/
+
+test
+train
+README.txt
+activity_labels.txt
+features.txt
+features_info.txt
+tidyData.txt
