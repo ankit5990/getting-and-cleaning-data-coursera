@@ -5,19 +5,10 @@ This repository contains the course project for Coursera Course - Getting and Cl
 
 File "CodeBook.md" contains the details of transformation that is done to cleanup the data.
 
-Scritp "run_analysis.R" is the actual script that performs data cleanup. 
-The script assumes following folder structure
-|
-|-test
-|   |-subject_test.txt
-|   |-X_test.txt
-|   |-y_test.txt
-|-train
-|   |-subject_train.txt
-|   |-X_train.txt
-|   |-y_train.txt
-|-activity_labels.txt
-|-features.txt
-|-run_analysis.R
+Script "run_analysis.R" is the actual script that performs data cleanup. 
+
+Analysis is performed on data from source : https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The data is downloaded and is unzipped, and the script "run_analysis.R" is placed in this extracted directory.
 
 Post execution the script creates a file 'tidyData.txt' which has the tidy data.
