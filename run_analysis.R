@@ -1,3 +1,5 @@
+library('plyr');
+
 features<-read.csv('features.txt', sep = '', header = FALSE);
 
 x_test<-read.csv('test//X_test.txt', sep = '', header = FALSE);
@@ -33,5 +35,7 @@ subject_test<-read.csv('test//subject_test.txt', sep = '', header = FALSE);
 subject_train<-read.csv('train//subject_train.txt', sep = '', header = FALSE);
 filteredData$subject<-append(subject_test[[1]], subject_train[[1]]);
 
+#5 created a seperate tidy data to record mean of each variable for activity and subject
 tidyData<-ddply(filteredData, .(activity.label, subject), function(x){colMeans(x[,2:80])});
+
 write.table(tidyData, 'tidyData.txt', row.names = FALSE);
